@@ -1,0 +1,845 @@
+//01. 변수 : 데이터를 저장하는 저장소(저장)
+        {
+            var x = 100;
+            var y = 200;
+            var z = "javascript";
+
+            document.write("**** 01. 변수 **** ");
+            document.write(x);
+            document.write(y);
+            document.write(z);
+        }
+
+        //02. 변수 : 저장 + 변경
+        {
+            let x = 100;
+            let y = 200;
+            let z = "javascript";
+            x = 300;
+            y = 400;
+            z = "jquery";
+
+            document.write("**** 02. 변수 **** ");
+            document.write(x);
+            document.write(y);
+            document.write(z);
+        }
+
+        //03. 변수 : 저장 + 변경 + 추가
+        {
+            let x = 100;
+            let y = 200;
+            let z = "javascript";
+            x += 300;       
+            y += 400;     
+            z += "jquery";
+
+            document.write("**** 03. 변수 **** ");
+            document.write(x);
+            document.write(y);
+            document.write(z);
+        }
+
+        //04. 배열 : 여러개의 데이터 저장소
+        {
+            const arr = new Array();
+            arr[0] = 100;
+            arr[1] = 200;
+            arr[2] = "javascript";
+
+            document.write("**** 04. 배열 **** ");
+            document.write(arr[0]);
+            document.write(arr[1]);
+            document.write(arr[2]);
+        }
+
+        //05. 배열
+        {
+            const arr = new Array(100, 200, "javascript");
+
+            document.write("**** 05. 배열 **** ");
+            document.write(arr[0]);
+            document.write(arr[1]);
+            document.write(arr[2]);
+        }
+
+        //06. 배열
+        {
+            const arr = [];
+            arr[0] = 100;
+            arr[1] = 200;
+            arr[2] = "javascript";
+
+            document.write("**** 06. 배열 **** ");
+            document.write(arr[0]);
+            document.write(arr[1]);
+            document.write(arr[2]);
+        }
+
+        //07. 배열
+        {
+            const arr = [100, 200, "javascript"];
+
+            document.write("**** 07. 배열 **** ");
+            document.write(arr[0]);
+            document.write(arr[1]);
+            document.write(arr[2]);
+        }
+
+        //08. 객체 : 데이터 저장소 : 키와 값 : 배열 스타일 : 표현방법1
+        {
+            const obj = new Object();
+            
+            obj[0] = 100;
+            obj[1] = 200;
+            obj[2] = "javascript";
+
+            document.write("**** 08. 배열 **** ");
+            document.write(obj[0]);
+            document.write(obj[1]);
+            document.write(obj[2]);
+        }
+
+        //09. 객체 : 데이터 저장소 : 키과 값 : 객체 스타일 : 표현방법2
+        {
+            const obj = new Object();
+
+            obj.a = 100;
+            obj.b = 200;
+            obj.c = "javascript";
+
+            document.write("**** 09. 객체 **** ");
+            document.write(obj.a);
+            document.write(obj.b);
+            document.write(obj.c);
+        }
+
+        //10. 객체 : 데이터 저장소 : 키와 값 : 표현방법3
+        {
+            const obj = {};
+
+            obj.a = 100;
+            obj.b = 200;
+            obj.c = "javascript";
+
+            document.write("**** 10. 객체 **** ");
+            document.write(obj.a);
+            document.write(obj.b);
+            document.write(obj.c);
+        }
+
+        //11. 객체 : 표현방법4
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javascript"
+            }
+
+            document.write("**** 11. 객체 **** ");
+            document.write(obj.a);
+            document.write(obj.b);
+            document.write(obj.c);
+        }
+
+        //12. 객체 : 표현방법5 : 배열 속에 객체
+        {
+            const obj = [
+                {a:100, b:200},
+                {a:"javascript"}
+            ]
+            document.write("**** 12. 객체 **** ");
+            document.write(obj[0].a);
+            document.write(obj[0].b);
+            document.write(obj[1].a);
+        }
+
+        //13. 객체 : 표현방법6 : 객체 속에 배열
+        {
+            const obj = {
+                a: 100,
+                b: [200, 300],
+                c: {x:400, y:500},
+                d: "javascript"
+            }
+            document.write("**** 13. 객체 **** ");
+            document.write(obj.a);
+            document.write(obj.b[0]);
+            document.write(obj.b[1]);
+            document.write(obj.c.x);
+            document.write(obj.c.y);
+            document.write(obj.d);
+        }
+
+        //14. 객체 : 표현방법7 : 객체 속에 변수
+        {
+            const a = 100;
+            const b = 200;
+            const c = "javascript";
+
+            const obj = {a, b, c}
+
+            document.write("**** 14. 객체 **** ");
+            document.write(obj.a)
+            document.write(obj.b)
+            document.write(obj.c)
+        }
+
+        //15. 객체 : 표현방법9 : 객체 속에 함수
+        {
+            const obj = {
+                a: 100,
+                b: [200, 300],
+                c: "javascript",
+                d: function(){
+                    document.write("javascript가 실행되었습니다.")
+                },
+                e: function(){
+                    document.write(obj.c + "가 실행되었습니다.");
+                },
+                f: function(){
+                    document.write(this.c + "가 실행되었습니다.");
+                }
+            }
+            document.write("**** 14. 객체 **** ");
+            document.write(obj.a);
+            document.write(obj.b);
+            document.write(obj.b[0]);
+            document.write(obj.b[1]);
+            document.write(obj.c);
+            obj.d();
+            obj.e();
+            obj.f();
+        }
+
+        // 변수 : 데이터 저장 : 데이터 변경 : 데이터 추가 
+        // 상수 : 데이터 저장 : 데이터 변경X : 데이터 추가X
+        // 배열 : 데이터 저장 : 여러개
+        // 객체 : 데이터 저장 : 여러개 : 키와 값
+
+        //데이터 불러오기
+
+        //16. 변수
+        {
+            let x = 100, y = 200, z = "javascript";
+
+            document.write("**** 16. 변수 **** ");
+            document.write(x);
+            document.write(y);
+            document.write(z);
+        }
+        //17. 상수
+        {
+            const x = 100, y = 200, z = "javascript";
+
+            document.write("**** 17. 상수 **** ");
+            document.write(x);
+            document.write(y);
+            document.write(z);
+        }
+        //18. 배열
+        {
+            const arr = [100,200,"javascript"];
+
+            document.write("**** 18. 배열 **** ");
+            document.write(arr[0]);
+            document.write(arr[1]);
+            document.write(arr[2]);
+        }
+
+        //19. 2차배열 
+        {
+            const arr = [100, 200, ["javascript"]];
+
+            document.write("**** 19. 배열 **** ");
+            document.write(arr[0]);
+            document.write(arr[1]);
+            document.write(arr[2][0]);
+        }
+
+        //20. 배열 : 갯수 구하기
+        {
+            const arr = [100, 200, "javascript"];
+
+            document.write("**** 20. 배열 **** ");
+            document.write(arr.length);
+        }
+
+        //21. 배열 : 데이터 불러오기 : for문
+        {
+            document.write("**** 21. 배열 **** ");
+
+            const arr = [100, 200, "javascript"];
+
+            for (let i=0; i &lt; arr.length; i++){
+                document.write(arr[i],"");
+            }
+        }
+
+        //22. 배열 : 데이터 불러오기 : forEach문 / each()
+        {
+            document.write("**** 22. 배열 **** ");
+
+            const arr = [100, 200, "javascript"];
+
+            arr.forEach(function(element){
+                document.write(element);
+            });
+
+            arr.forEach(function(element, index, array){
+                document.write(element);
+                document.write(index);
+                document.write(array);
+            });
+        }
+
+        //23. 배열 : 데이터 불러오기 : for in
+        {
+            document.write("**** 23. 배열 **** ");
+
+            const arr = [100, 200, "javascript"];
+
+            for( let i in arr ){
+                document.write(arr[i]);
+            }
+        }
+        //24. 배열 : 데이터 불러오기 : for of
+        {
+            document.write("**** 24. 배열 **** ");
+
+            const arr = [100, 200, "javascript"];
+
+            for( let i of arr ){
+                document.write(i);
+            }
+        }
+
+        //25. 배열 : 데이터 불러오기 : map()
+        {
+            document.write("**** 25. 배열 **** ");
+
+            const arr = [100, 200, "javascript"];
+
+            arr.map((el) => {
+                document.write(el,"");
+            });
+        }
+
+        //26. 배열 : 데이터 불러오기 : 배열 펼침 연산자
+        {
+            document.write("**** 26. 배열 **** ");
+
+            const arr = [100, 200, "javascript"];
+
+            document.write(arr);
+            document.write(arr[0], arr[1], arr[2]);
+            document.write(...arr);
+        }
+
+        //27. 배열 : 데이터 불러오기 : 배열 구조 분해 할당
+        {
+            document.write("**** 27. 배열 **** ");
+
+            let a,b,c;
+            [a,b,c] = [100,200,"javascript"];
+
+            document.write(a,"");
+            document.write(b,"");
+            document.write(c,"");
+        }
+
+        //28. 객체 : 데이터 불러오기 : 기본
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javscript"
+            }
+
+            document.write("**** 27. 객체 **** ");
+            document.write(obj.a,"");
+            document.write(obj.b,"");
+            document.write(obj.c,"");
+            document.write(obj['a'],"");
+            document.write(obj['b'],"");
+            document.write(obj['c'],"");
+        }
+
+        //29. 객체 : 데이터 불러오기 : 기본
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javscript"
+            }
+
+            document.write("**** 29. 객체 **** ");
+            document.write(Object.keys(obj),"");
+            document.write(Object.values(obj),"");
+            document.write(Object.entries(obj),"");
+        }
+
+        //30. 객체 : 데이터 불러오기 : 변수
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javscript"
+            }
+            const name1 = obj.a;
+            const name2 = obj.b;
+            const name3 = obj.c;
+
+            document.write("**** 30. 객체 **** ");
+            document.write(name1,"");
+            document.write(name2,"");
+            document.write(name3,"");
+        }
+
+        //31. 객체 : 데이터 불러오기 : for in
+        {
+            document.write("**** 31. 객체 **** ");
+
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javscript"
+            }
+            for (let i in obj){
+                document.write(obj[i])
+            }
+        }
+
+        //32. 객체 : 데이터 불러오기 : map();
+        {
+            document.write("**** 32. 객체 **** ");
+
+            const obj = [
+                {a: 100},
+                {a: 200},
+                {a: "javascript"}
+            ];
+
+            obj.map(el => {
+                document.write(el.a);
+            })
+        }
+
+        //33. 객체 : 데이터 불러오기 : hasOwnProperty()
+        {
+            document.write("**** 33. 객체 **** ");
+
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javscript"
+            }
+
+            document.write(obj.hasOwnProperty("a"));
+            document.write(obj.hasOwnProperty("b"));
+            document.write(obj.hasOwnProperty("c"));
+            document.write(obj.hasOwnProperty("100"));
+            document.write("a" in obj);
+            document.write("b" in obj);
+            document.write("c" in obj);
+            document.write("100" in obj);
+        }
+
+        //34. 객체 : 데이터 불러오기 : 펼침 연산자 : 복사
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javscript"
+            }
+            const spread = {...obj}
+
+            document.write("**** 34. 객체 **** ");
+            document.write(spread.a);
+            document.write(spread.b);
+            document.write(spread.c);
+        }
+
+        //35. 객체 : 데이터 불러오기 : 펼침 연산자 : 추가
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javscript"
+            }
+            const spread = {...obj, d: "jquery"}
+
+            document.write("**** 35. 객체 **** ");
+            document.write(spread.a);
+            document.write(spread.b);
+            document.write(spread.c);
+            document.write(spread.d);
+        }
+
+        //36. 객체 : 데이터 불러오기 : 펼침 연산자 : 결합
+        {
+            const objA = {
+                a: 100,
+                b: 200
+            }
+            const objB = {
+                c: "javscript",
+                d: "jquery"
+            }
+            const spread = {...objA, ...objB}
+
+            document.write("**** 36. 객체 **** ");
+            document.write(spread.a);
+            document.write(spread.b);
+            document.write(spread.c);
+            document.write(spread.d);
+        }
+
+        //37. 객체 : 데이터 불러오기 : 객체 구조 분해 할당 
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javscript"
+            }
+            const {a,b,c} = obj;
+
+            document.write("**** 37. 객체 **** ");
+            document.write(a);
+            document.write(b);
+            document.write(c);
+        }
+
+        //38. 객체 : 데이터 불러오기 : 객체 구조 분해 할당 : 별도 이름 저장
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javscript"
+            }
+            const {a:name1, b:name2, c:name3} = obj;
+
+            document.write("**** 38. 객체 **** ");
+            document.write(name1);
+            document.write(name2);
+            document.write(name3);
+        }
+
+        // 데이터 저장하기 - 변수, 상수, 배열, 객체
+        // 데이터 불러오기 - 변수, 상수, 배열, 객체
+        // 데이터 실행하기 - 함수, 클래스(함수의 집합체), 제어문
+
+        // 내장 객체 - 숫자 객체, 문자열 객체, 배열 객체, 수학 객체, 브라우저 객체, 요소 객체, 이벤트 객체
+        // 리액트 데이터 실행 - 함수형 컴퍼넌트 / 클래스 컴퍼넌트 --> 리액트 훅
+
+        //함수 
+        //39. 선언적 함수
+        {
+            document.write("**** 39. 선언적 함수 **** ");
+
+            function func(){
+                document.write("함수가 실행되었습니다.");
+            }
+            func();
+        }
+
+        //40. 익명 함수
+        {
+            document.write("**** 40. 익명 함수 **** ");
+
+            const func = function(){
+                document.write("함수가 실행되었습니다.");
+            }
+            func();
+        }
+
+        //41. 매개변수 함수
+        {
+            document.write("**** 41. 매개변수 함수 **** ");
+
+            const func = function(str){
+                document.write(str);
+            }
+            func("함수가 실행되었습니다.");
+        }
+
+        //42. 리턴값 함수
+        {
+            document.write("**** 42. 리턴값 함수 **** ");
+
+            function func(){
+                const str = "함수가 실행되었습니다.";
+                return str;
+            }
+            document.write(func())
+        }
+
+        //43. 화살표 함수 : 선언적 함수
+        {
+            document.write("**** 43. 화살표 함수 : 선언적 함수 **** ");
+
+            func = () => {
+                document.write("함수가 실행되었습니다.");
+            }
+            func();
+        }
+
+        //44. 화살표 함수 : 익명 함수
+        {
+            document.write("**** 44. 화살표 함수 : 익명 함수 **** ");
+
+            const func = () => {
+                document.write("함수가 실행되었습니다.");
+            }
+            func();
+        }
+
+        //45. 화살표 함수 : 리턴값 함수
+        {
+            document.write("**** 45. 화살표 함수 : 리턴값 함수 **** ");
+
+            func = () => {
+                const str ="함수가 실행되었습니다.";
+                return str;
+            }
+            document.write(func());
+        }
+
+        //46. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값
+        {
+            document.write("**** 46. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 **** ");
+
+            const func = (str) => {
+                return str;
+            }
+            document.write(func("함수가 실행되었습니다."));
+        }
+
+        //47. 화살표 함소 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략
+        {
+            document.write("**** 47. 화살표 함소 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 **** ");
+
+            const func = str => {
+                return str;
+            }
+            document.write(func("함수가 실행되었습니니다."))
+        }
+
+        //48. 화살표 함소 : 익명 함수 + 매개변수 + 리턴값 생략 + 괄호 생략
+        {
+            document.write("**** 48. 화살표 함소 : 익명 함수 + 매개변수 + 리턴값 생략 + 괄호 생략 **** ");
+
+            const func = str => str;
+            
+            document.write(func("함수가 실행되었습니니다."))
+        }
+
+        //49. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 생략 + 괄호 생략
+        {
+            document.write("**** 49. 화살표 함소 : 선언적 함수 + 매개변수 + 리턴값 생략 + 괄호 생략 **** ");
+
+            func = str => str;
+            
+            document.write(func("함수가 실행되었습니니다."))
+        }
+
+
+
+
+        //익명 함수
+        //매개변수 함수
+        //리턴값 함수
+        //화살표 함수 : 선언적 함수
+        //화살표 함수 : 익명 함수
+        //화살표 함수 : 매개변수 함수
+        //화살표 함수 : 리턴값 함수
+        //내부 함수 --> 클로저
+        //즉시실행 함수
+        //파라미터 함수
+        //아규먼트 함수
+
+        //재귀 함수 : 함수 안에서 자기 자신을 호출하는 함수
+        //콜백 함수 : 함수를 실행시키고 난 뒤 다른 함수를 호출하는 함수
+        //로딩 소스(API) --> 메인 애니메이션 소스  --> fetch()
+        //동기(동시)/비동기(동시X) --> $ajax 
+        //콜백 지옥 --> promise()
+        //리액트 --> axios
+        //데이터 가져오기(개발자)
+
+        //퍼블리셔 프론트앤드 개발자 --> 출력하기  --> html 코딩 --> 리액트 코딩
+
+        //함수 유형 : 함수와 매개변수를 이용한 형태
+        //함수 유형 : 함수와 변수를 이용한 형태
+        //함수 유형 : 함수와 배열을 이용한 형태
+        //함수 유형 : 함수와 객체를 이용한 형태
+        //함수 유형 : 함수와 객체(함수)를 이용한 형태
+        //함수 유형 : 객체 생성자 함수(*)
+        //함수 유형 : 프로토타입 함수
+        //함수 유형 : 객체 리터럴 함수
+        //함수 유형 : 클래스(*)
+
+        //50. 함수 유형 : 함수와 매개변수를 이용한 형태
+        {
+            document.write("**** 50. 함수 유형 : 함수와 매개변수를 이용한 형태 **** ");
+
+            function func(num, name, job){
+                document.write(num + ". 내 이름은 " + name + "이며, 직업은 " + job + "입니다.");
+            }
+
+            func("1","웹쓰","웹퍼블리셔");
+            func("2","웹스토리보이","프론트앤드개발자");
+        }
+
+        //51. 함수 유형 : 함수와 변수를 이용한 형태
+        {
+            document.write("**** 51. 함수 유형 : 함수와 변수를 이용한 형태 **** ");
+
+            function func(num, name, job){
+                document.write(num + ". 내 이름은 " + name + "이며, 직업은 " + job + "입니다.");
+            }
+
+            const youNum1 = "1";
+            const youName1 = "웹쓰";
+            const youJob1 = "웹퍼블리셔";
+            const youNum2 = "2";
+            const youName2 = "웹스토리보이";
+            const youJob2 = "프로트앤드 개발자";
+
+            func(youNum1, youName1, youJob1);
+            func(youNum2, youName2, youJob2);
+        }
+
+        //52. 함수 유형 : 함수와 배열를 이용한 형태
+        {
+            document.write("**** 52. 함수 유형 : 함수와 배열를 이용한 형태 **** ");
+
+            function func(num, name, job){
+                document.write(num + ". 내 이름은 " + name + "이며, 직업은 " + job + "입니다.");
+            }
+
+            const info = [
+                {
+                    num: 1,
+                    name: "웹쓰",
+                    job: "웹 퍼블리셔"
+                },{
+                    num: 2,
+                    name: "웹스토리보이",
+                    job: "프론트앤드 개발자"
+                }
+            ]
+
+            func(info[0].num, info[0].name, info[0].job);
+            func(info[1].num, info[1].name, info[1].job);
+        }
+
+        //53. 함수 유형 : 함수와 객체를 이용한 형태
+        {
+            document.write("**** 53. 함수 유형 : 함수와 객체를 이용한 형태 **** ");
+
+            function func(num, name, job){
+                document.write(num + ". 내 이름은 " + name + "이며, 직업은 " + job + "입니다.");
+            }
+
+            const info = {
+                num1: 1,
+                name1: "웹쓰",
+                job1: "웹 퍼블리셔",
+                num2: 2,
+                name2: "웹스토리보이",
+                job2: "프론트앤드 개발자"
+            }
+
+            func(info.num1, info.name1, info.job1);
+            func(info.num2, info.name2, info.job2);
+        }
+
+        //54. 함수 유형 : 함수와 객체(함수)를 이용한 형태
+        {
+            document.write("**** 54. 함수 유형 : 함수와 객체(함수)를 이용한 형태 **** ");
+
+            const info = {
+                num1: 1,
+                name1: "웹쓰",
+                job1: "웹 퍼블리셔",
+                num2: 2,
+                name2: "웹스토리보이",
+                job2: "프론트앤드 개발자",
+
+                result1 : function(){
+                    document.write(this.num1 + ". 내 이름은 " + this.name1 + "이며, 직업은 " + this.job1 + "입니다.")
+                },
+                result2 : function(){
+                    document.write(this.num2 + ". 내 이름은 " + this.name2 + "이며, 직업은 " + this.job2 + "입니다.")
+                }
+            }
+            info.result1();
+            info.result2();
+        }
+
+        //55. 함수 유형 : 객체 생성자 함수
+        {
+            document.write("**** 55. 함수 유형 : 객체 생성자 함수 **** ")
+
+            function func(num, name, job){
+                this.num = num;
+                this.name = name;
+                this.job = job;
+
+                this.result = function(){
+                    document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.");
+                }
+            }
+            const info1 = new func("1", "웹쓰", "웹퍼블리셔");       //인스턴스 생성
+            const info2 = new func("2", "웹스토리보이", "웹퍼블리셔"); //인스턴스 생성
+
+            info1.result();
+            info2.result();
+        }
+
+        //56. 함수 유형 : 프로토타입 함수
+        {
+            document.write("**** 56. 함수 유형 : 프로토타입 함수 **** ")
+
+            function func(num, name, job){
+                this.num = num;
+                this.name = name;
+                this.job = job;
+            }
+
+            func.prototype.result = function(){
+                document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.");
+            }
+
+            const info1 = new func("1", "웹쓰", "웹퍼블리셔");       //인스턴스 생성
+            const info2 = new func("2", "웹스토리보이", "웹퍼블리셔"); //인스턴스 생성
+
+            info1.result();
+            info2.result();
+        }
+
+        //57. 함수 유형 : 객체 리터럴 함수
+        {
+            document.write("**** 57. 함수 유형 : 객체 리터럴 함수 **** ")
+
+            function func(num, name, job){
+                this.num = num;
+                this.name = name;
+                this.job = job;
+            }
+
+            func.prototype = {
+                result1: function(){
+                    document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.");
+                },
+                result2: function(){
+                    document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.");
+                }
+            }
+
+            const info1 = new func("1", "웹쓰", "웹퍼블리셔");       //인스턴스 생성
+            const info2 = new func("2", "웹스토리보이", "웹퍼블리셔"); //인스턴스 생 r
+
+            info1.result1();
+            info2.result2();
+        }
